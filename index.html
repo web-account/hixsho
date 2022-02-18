@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hixsho</title>	
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi|Comfortaa|Yanone Kaffeesatz">
+
+
+</head>
+<body>
+<!-- Logo -->
+	<img id="img-logo" src="logo.png">
+
+<!-- contenu -->
+	<div class="contenu">
+		<p id="subscribe">Contact US to Subscribe</p>
+
+		<a class="links phone-11" href="https://wa.me/+212653244751" target="-blanck">
+			<img class="icons" src="icon_phone.png">
+			<p id="titre">Whatsapp</p>
+		</a><br/>
+
+		<a class="links phone-11" href="#img-logo" onclick="afficher()">
+			<img class="icons" src="icon_email.png">
+			<p id="titre">Email</p>
+		</a>
+
+		<h1 id="important" class="phone-11">Very Important</h1>
+
+		<p class="paragraphs">In order to provide fast , secure and powerfull service,</p>
+		<p class="paragraphs">we have deleted all of our data from the Internet,</p>
+		<p class="paragraphs">and we provide our service on</p>
+		<p class="paragraphs">WhatsApp and email only.</p>
+	
+
+<!-- Info bull -->
+
+	<div class="phone-9 info-bull" id="info_bull">
+		<p id="label" class="phone-12">Email address : </p>
+		<p id="p-gmail" class="phone-12">stitoubusiness@gmail.com</p>
+		<button type="button" id="bt-coppy" onclick="copierTexte()"><b>Coppy</b></button>
+
+		<span id="msg">
+			<img id="img-valide" src="icon_valide.png">EMAIL COPPIED
+		</span>
+	</div>
+
+
+	</div>
+
+	<p  class="paragraphs bottom">hixsho iptv Service</p>
+
+
+<script>
+		function afficher(){
+			document.getElementById('info_bull').style.display="block";
+		}
+
+    var texte = document.getElementById("p-gmail")
+    copierTexte = () => {
+        if (texte.textContent.length) {
+            navigator.clipboard.writeText(texte.textContent).then(() => {
+            	document.getElementById('msg').style.visibility="visible";
+            	setTimeout(cacher,1500);            	
+
+
+            })
+
+            function cacher(){            	
+            	document.getElementById('msg').style.visibility="hidden";
+            	document.getElementById('info_bull').style.display="none";
+            }
+        }
+    }
+</script>
+</body>
+</html>
